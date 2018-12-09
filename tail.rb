@@ -15,7 +15,7 @@ class Tail
   end
 
   def parse(args)
-  	parser.parse!(args)
+    parser.parse!(args)
   end
 
   def call(args)
@@ -33,13 +33,13 @@ class Tail
   private
 
   def init_parser
-  	@parser = OptionParser.new
+    @parser = OptionParser.new
 
-  	parser.banner = "Usage: ./tail.rb [options] FILENAME"
-  	parser.separator ''
-  	parser.separator 'Specific options:'
+    parser.banner = "Usage: ./tail.rb [options] FILENAME"
+    parser.separator ''
+    parser.separator 'Specific options:'
 
-  	parser.on('-f', '--follow', TrueClass, "Shows last #{Live::LINE_NUMBERS} lines and will be show data which\
+    parser.on('-f', '--follow', TrueClass, "Shows last #{Live::LINE_NUMBERS} lines and will be show data which\
  was appended to the file") do |f|
       follow = f
     end
